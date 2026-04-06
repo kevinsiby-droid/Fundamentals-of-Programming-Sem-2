@@ -1,0 +1,45 @@
+//Kevin Siby
+//International School of Photonics
+//25020096
+# include <stdio.h>
+void main ()
+{
+    int a[100], n, s, l, h, m, found = 0;
+    printf ("Enter the limit: ");
+    scanf ("%d", &n);
+    printf ("Enter the sorted elements: ");
+    for (i = 0; i < n; i++)
+    {
+        scanf ("%d", &a[i]);
+    }
+    printf ("Enter the value to search: ");
+    scanf ("%d", &s);
+    l = 0;
+    h = n - 1;
+    while (l <= h)
+    {
+        m = (l + h) / 2;
+        if (s == a[m])
+        {
+            printf ("the element %d is found at ", s);
+            found = 1; break;
+        }
+        else if (s < a[m])
+        {
+            h = m - 1;
+        }
+        else
+        {
+            l = m + 1;
+        }
+    }
+
+    if (found == 1)
+    {
+        printf ("Element %d found at %d", s, m);
+    }
+    else
+    {
+        printf ("Element not found");
+    }
+}
