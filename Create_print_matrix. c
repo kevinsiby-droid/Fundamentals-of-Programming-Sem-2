@@ -1,0 +1,25 @@
+//Kevin Siby
+//International School of Photonics
+//25020096
+#include <stdio.h>
+
+int main() {
+    int matrix[2][2], i, j;
+
+    printf("Enter elements for a 2x2 matrix:\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 2; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    printf("The matrix is:\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 2; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
