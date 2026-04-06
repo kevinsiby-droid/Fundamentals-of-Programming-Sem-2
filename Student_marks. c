@@ -1,0 +1,45 @@
+//kevin siby
+//photonics
+//25020096
+// Marks of students
+#include<stdio.h>
+void main()
+{
+    struct marks
+    {
+        int total;
+        int subject[3];
+    };
+    struct marks student[3];
+    int i,j,sum;
+    for(i=0;i<3;i++)
+    {
+        printf("enter marks of students");
+        for(j=0;j<3;j++)
+        {
+            scanf("%d",&student[i].subject[j]);
+        }
+    }
+    for(i=0;i<3;i++)
+    {
+        student[i].total=0;
+        for(j=0;j<3;j++)
+        {
+            student[i].total=student[i].total+student[i].subject[j];
+        }
+    }
+    for(i=0;i<3;i++)
+    {
+        printf("\nthe total marks of student%d is %d",i+1
+               ,student[i].total);
+    }
+    for(i=0;i<3;i++)
+    {
+        sum=0;
+        for(j=0;j<3;j++)
+        {
+            sum=sum+student[j].subject[i];
+        }
+        printf("\nthe sum of subject%d is %d",i+1,sum);
+    }
+}
