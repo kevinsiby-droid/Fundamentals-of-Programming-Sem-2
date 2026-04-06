@@ -1,0 +1,28 @@
+//Kevin Siby
+//International School of Photonics
+//25020096
+#include <stdio.h>
+
+void main() {
+    struct book
+    {
+        char title[100];
+        char author[100];
+        float price;
+        int pages;
+
+    };
+    struct book b1={"Harry Potter", "J K Rowling", 250.0,100};
+    struct book b2={"hello", "Kevin", 25.0,10};
+    struct book b3;
+    b3=b2;
+    printf("%d", b3.pages);
+    if(b3.pages==b1.pages)
+    {
+        printf("pages are same");
+    }
+    else
+    {
+        printf("pages are not same");
+    }
+}
