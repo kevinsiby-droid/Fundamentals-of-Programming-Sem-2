@@ -1,0 +1,73 @@
+//Kevin Siby
+//International School of Photonics
+//25020096
+#include <stdio.h>
+void main()
+{
+    int a[100][100], i, j, m, n, sum;
+    printf("enter limits of rows and columns");
+    scanf("%d %d", &m, &n);
+    printf("enter the elements");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            printf("%d\t", a[i][j]);
+        }
+        printf("\n");
+    }
+    if (m == n)
+    {
+        sum = 0;
+        printf("Diagonal elements");
+        for (i = 0; i < m; i++)
+        {
+            for (j = 0; j < n; j++)
+            {
+                if (i == j)
+                {
+                    printf("%d\t", a[i][j]);
+                    sum = sum + a[i][j];
+                }
+            }
+        }
+        printf("\n The sum of diagonal elements is %d\n", sum);
+
+        sum = 0;
+        printf("upper triangular elements");
+        for (i = 0; i < m; i++)
+        {
+            for (j = 0; j < n; j++)
+            {
+                if (i <= j)
+                {
+                    printf("%d\t", a[i][j]);
+                    sum = sum + a[i][j];
+                }
+            }
+        }
+        printf("\n The sum of upper triangular elements is %d\n", sum);
+
+        sum = 0;
+        printf("lower triangular elements");
+        for (i = 0; i < m; i++)
+        {
+            for (j = 0; j < n; j++)
+            {
+                if (i >= j)
+                {
+                    printf("%d\t", a[i][j]);
+                    sum = sum + a[i][j];
+                }
+            }
+        }
+        printf("\n The sum of lower triangular elements is %d\n", sum);
+    }
+}
