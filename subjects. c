@@ -1,0 +1,21 @@
+//Kevin Siby
+//International School of Photonics
+//25020096
+#include <stdio.h>
+
+int main() {
+    int maths, phy, chem;
+    printf("enter marks");
+    scanf("%d %d %d", &maths, &phy,
+    &chem);
+    if (maths>=60&&phy>=50&&chem>=40&&
+    (maths+phy+chem>=200 || maths
+    +phy>=150))
+    {
+        printf("eligible");
+    }
+    else
+    {
+        printf("not eligible");
+    }
+}
