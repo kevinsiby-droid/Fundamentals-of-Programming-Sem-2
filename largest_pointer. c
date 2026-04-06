@@ -1,0 +1,40 @@
+//Kevin Siby
+//International School of Photonics
+//25020096
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+    int *p1,*p2,*p3;
+
+    p1=&a;
+    p2=&b;
+    p3=&c;
+
+    printf("Enter a number: ");
+    scanf("%d", p1);
+
+    printf("Enter a number: ");
+    scanf("%d", p2);
+
+    printf("Enter a number: ");
+    scanf("%d", p3);
+
+    if(*p1 > *p2)
+    {
+        if(*p1 > *p3)
+            printf("%d is largest.", *p1);
+        else
+            printf("%d is largest.", *p3);
+    }
+    else
+    {
+        if(*p2 > *p3)
+            printf("%d is largest.", *p2);
+        else
+            printf("%d is largest.", *p3);
+    }
+
+    return 0;
+}
