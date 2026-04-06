@@ -1,0 +1,17 @@
+//Kevin Siby
+//International School of Photonics
+//25020096
+#include <stdio.h>
+
+int main() {
+    float length, width, height, volume;
+
+    printf("Enter length, width, and height: ");
+    scanf("%f %f %f", &length, &width, &height);
+
+    volume = length * width * height;
+
+    printf("Volume of the cuboid: %f\n", volume);
+
+    return 0;
+}
