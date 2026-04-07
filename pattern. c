@@ -1,0 +1,19 @@
+//Kevin Siby
+//International School of Photonics
+//25020096
+#include <stdio.h>
+
+int main() {
+    int i, n,j;
+    n=7;
+    
+    for(i=0;i<n;i++){
+        for(j=0;j<=i;j++){
+            printf("*\t");
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
